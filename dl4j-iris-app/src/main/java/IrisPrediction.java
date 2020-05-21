@@ -3,8 +3,6 @@ import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
 import org.nd4j.linalg.factory.Nd4j;
 
-import java.io.IOException;
-
 public class IrisPrediction {
     public static void main(String[] args) throws Exception {
         Init(new double[][]{

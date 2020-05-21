@@ -25,10 +25,15 @@ import org.nd4j.linalg.learning.config.Sgd;
 import org.nd4j.linalg.lossfunctions.LossFunctions;
 
 import java.io.File;
+import java.io.IOException;
 
 public class iris_app {
     public static void main(String[] args) throws Exception {
         //System.out.println(System.getProperty("sun.arch.data.model"));
+        Init(500);
+    }
+
+    public static void Init(int nEpochs) throws Exception {
         double learningRate=0.001;
         int numIn=4,numOut=3,nHidden=10,seed=1234;
         System.out.println("Creation of model-------------------------------------------------------------------------");
@@ -82,8 +87,6 @@ public class iris_app {
             System.out.println(dataSet.getLabels());
             System.out.println("-----------------------------------------------------------");
         }
-        //Train our model 500 time
-        int nEpochs=500;
         for (int i = 0; i <nEpochs ; i++) model.fit(dataSetTrain);
         System.out.println("End of training---------------------------------------------------------------------------");
 
